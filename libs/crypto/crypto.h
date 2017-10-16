@@ -13,6 +13,7 @@
 
 char * encrypt(char * text, int key);
 char * decrypt(char * text, int key);
+int mod(int a, int b);
 void setAlphabetCase(char letter, char *first_letter, char *last_letter);
 char shiftLetter(char letter, int offset);
 

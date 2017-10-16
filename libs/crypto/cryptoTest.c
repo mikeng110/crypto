@@ -24,6 +24,18 @@ void decryptTest()
     printf("decryptTest - Passed\n");
 }
 
+int modTest()
+{
+    assert(mod(1,2) == 1);
+    assert(mod(2,2) == 0);
+    assert(mod(3,2) == 1);
+    assert(mod(-1,3) == 2);
+    assert(mod(-2,3) == 1);
+    assert(mod(-3,3) == 0);
+
+    printf("modTest - Passed\n");
+}
+
 void setAlphabetCaseTest()
 {
     char first_letter, last_letter;

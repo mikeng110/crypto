@@ -43,35 +43,30 @@ void setAlphabetCase(char letter, char *first_letter, char *last_letter)
     }
 }
 
+int mod(int a, int b)
+{
+    int result;
+    result = a % b;
+    while (result < 0)
+    {
+        result += b;
+    }
+    return result;
+}
+
 char shiftLetter(char letter, int offset)
 {
     char first_letter, last_letter;
     int dist, dist_total, letter_pos;
 
-    if (isdigit(letter)) return letter; 
-    if (offset == 0) return letter;
+    if (isdigit(letter))    return letter; 
+    if (offset == 0)        return letter;
 
     setAlphabetCase(letter, &first_letter, &last_letter);
    
     dist = letter - first_letter;
     dist_total = last_letter - first_letter;
-    letter_pos = dist + offset;
-    
-    if (offset >= 0)
-    {
-        if (letter_pos > dist_total)
-        {
-            letter_pos -= dist_total + 1;
-        }
-    }
-
-    else if (offset < 0)
-    {
-        if (letter_pos < 0)
-        {
-            letter_pos += dist_total + 1;
-        }
-    }
+    letter_pos = mod(dist + offset, dist_total+1);
 
     return  first_letter + letter_pos;
 

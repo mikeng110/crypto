@@ -10,6 +10,7 @@ int main()
 
     if (RUN_UNIT_TESTS)
     {
+        modTest();
         setAlphabetCaseTest();
         shiftLetterTest();
         encryptTest();
