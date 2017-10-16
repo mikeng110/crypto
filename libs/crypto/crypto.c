@@ -18,7 +18,12 @@ char * encrypt(char * text, int key)
 
 char * decrypt(char * text, int key)
 {
-    return encrypt(text, -1*key);
+    char decryptedText[STRING_MAX_LENGTH];
+    char *s_ptr = decryptedText;
+
+    strcpy(decryptedText, encrypt(text, -1 * key));
+
+    return s_ptr;
 }
 
 void setAlphabetCase(char ch, char *first_ch, char *last_ch)
@@ -62,8 +67,8 @@ char shiftCharacter(char ch, int offset)
     char first_ch, last_ch;
     int dist_ch, dist_total, new_ch_pos;
 
-    if (isdigit(ch))        return ch; 
-    if (offset == 0)        return ch;
+    if (!isalpha(ch))   return ch; 
+    if (offset == 0)    return ch;
 
     setAlphabetCase(ch, &first_ch, &last_ch);
    

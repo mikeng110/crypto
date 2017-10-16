@@ -6,7 +6,7 @@
 #include <string.h>
 
 #include "crypto.h"
-
+void    cryptoTest();
 void    encryptTest();
 void    decryptTest();
 int     modTest();

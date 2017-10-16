@@ -5,22 +5,20 @@
 
 int main() 
 {
-    char * text = "Apples90";
+    char * text = "Hello this text is a sample.\n<Html></Html> | ahahah | 90x873474 | >< )\n\\---------------------------";
 
     if (RUN_UNIT_TESTS)
     {
-        modTest();
-        setAlphabetCaseTest();
-        shiftCharacterTest();
-        encryptTest();
-        decryptTest();
+        cryptoTest();
     }
-
-    printf("The string to be encrypted is: %s\n", text);
-    text = encrypt(text, 1);
-    printf("Encrypted: %s\n", text);
-    text = decrypt(text, 1);
-    printf("Decrypted: %s\n", text);
-
+    else
+    {
+        printf("The string to be encrypted is:\n %s\n\n", text);
+        text = encrypt(text, 1);
+        printf("Encrypted:\n %s\n\n", text);
+        text = decrypt(text, 1);
+        printf("Decrypted:\n %s\n\n", text);
+    }
+    
     return 0;
 }
