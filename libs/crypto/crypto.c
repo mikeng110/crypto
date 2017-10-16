@@ -60,7 +60,7 @@ int mod(int a, int b)
 char shiftCharacter(char ch, int offset)
 {
     char first_ch, last_ch;
-    int dist_ch, dist_total, ch_pos;
+    int dist_ch, dist_total, new_ch_pos;
 
     if (isdigit(ch))        return ch; 
     if (offset == 0)        return ch;
@@ -69,7 +69,7 @@ char shiftCharacter(char ch, int offset)
    
     dist_ch = ch - first_ch;
     dist_total = last_ch - first_ch;
-    ch_pos = mod(dist_ch + offset, dist_total+1);
+    new_ch_pos = mod(dist_ch + offset, dist_total+1);
 
-    return  first_ch + ch_pos;
+    return  first_ch + new_ch_pos;
 }
