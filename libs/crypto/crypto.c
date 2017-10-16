@@ -25,16 +25,13 @@ void setAlphabetCase(char letter, char *first_letter, char *last_letter)
 {
     if (isalpha(letter))
     {
-        
         if (isupper(letter))
-        {
-            
+        { 
             *first_letter = FIRST_LETTER_UPPER;
             *last_letter = LAST_LETTER_UPPER;
         }
         else
         {
-            
             *first_letter = FIRST_LETTER_LOWER;
             *last_letter = LAST_LETTER_LOWER;
         }
@@ -60,7 +57,6 @@ char shiftLetter(char letter, int offset)
     dist_total = last_letter - first_letter;
     letter_pos = dist + offset;
     
-
     if (offset >= 0)
     {
         if (letter_pos > dist_total)
