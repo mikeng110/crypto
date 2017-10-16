@@ -11,7 +11,7 @@ int main()
     {
         modTest();
         setAlphabetCaseTest();
-        shiftLetterTest();
+        shiftCharacterTest();
         encryptTest();
         decryptTest();
     }

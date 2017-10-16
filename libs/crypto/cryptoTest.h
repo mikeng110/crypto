@@ -11,6 +11,6 @@ void    encryptTest();
 void    decryptTest();
 int     modTest();
 void    setAlphabetCaseTest();
-void    shiftLetterTest();
+void    shiftCharacterTest();
 
 #endif

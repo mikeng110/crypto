@@ -10,7 +10,7 @@ char * encrypt(char * text, int key)
 
     for (i = 0; text[i] != '\0'; i++ )
     {
-        encryptedText[i] = shiftLetter(text[i], key);
+        encryptedText[i] = shiftCharacter(text[i], key);
     }
 
     return s_ptr;
@@ -21,27 +21,27 @@ char * decrypt(char * text, int key)
     return encrypt(text, -1*key);
 }
 
-void setAlphabetCase(char letter, char *first_letter, char *last_letter)
+void setAlphabetCase(char ch, char *first_ch, char *last_ch)
 {
-    if (isalpha(letter))
+    if (isalpha(ch))
     {
-        if (isupper(letter))
+        if (isupper(ch))
         { 
-            *first_letter = FIRST_LETTER_UPPER;
-            *last_letter = LAST_LETTER_UPPER;
+            *first_ch = FIRST_LETTER_UPPER;
+            *last_ch = LAST_LETTER_UPPER;
         }
-        
+
         else
         {
-            *first_letter = FIRST_LETTER_LOWER;
-            *last_letter = LAST_LETTER_LOWER;
+            *first_ch = FIRST_LETTER_LOWER;
+            *last_ch = LAST_LETTER_LOWER;
         }
     }
 
     else
     {
-        *first_letter = '\0';
-        *last_letter = '\0';
+        *first_ch = '\0';
+        *last_ch = '\0';
     }
 }
 
@@ -57,19 +57,19 @@ int mod(int a, int b)
     return result;
 }
 
-char shiftLetter(char letter, int offset)
+char shiftCharacter(char ch, int offset)
 {
-    char first_letter, last_letter;
-    int dist, dist_total, letter_pos;
+    char first_ch, last_ch;
+    int dist_a_to_ch, dist_total, ch_pos;
 
-    if (isdigit(letter))    return letter; 
-    if (offset == 0)        return letter;
+    if (isdigit(ch))    return ch; 
+    if (offset == 0)        return ch;
 
-    setAlphabetCase(letter, &first_letter, &last_letter);
+    setAlphabetCase(ch, &first_ch, &last_ch);
    
-    dist = letter - first_letter;
-    dist_total = last_letter - first_letter;
-    letter_pos = mod(dist + offset, dist_total+1);
+    dist_a_to_ch = ch - first_ch;
+    dist_total = last_ch - first_ch;
+    ch_pos = mod(dist_a_to_ch + offset, dist_total+1);
 
-    return  first_letter + letter_pos;
+    return  first_ch + ch_pos;
 }

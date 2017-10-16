@@ -52,13 +52,13 @@ void setAlphabetCaseTest()
     printf("setAlpabetCaseTest - Passed\n");
 }
 
-void shiftLetterTest()
+void shiftCharacterTest()
 {
-    assert(shiftLetter('a', 1) == 'b' &&  "expected a -> b, TEST CASE 1"); 
-    assert(shiftLetter('a', -1) == 'z' && "expected a -> z, TEST CASE 2 ");
-    assert(shiftLetter('z', 1) == 'a' &&  "expected z -> a, TEST CASE 3");
-    assert(shiftLetter('z', -1) == 'y' && "expected z -> b, TEST CASE 4");
-    assert(shiftLetter('a', 25) == 'z' && "expected a -> z, TEST CASE 5");
+    assert(shiftCharacter('a', 1) == 'b' &&  "expected a -> b, TEST CASE 1"); 
+    assert(shiftCharacter('a', -1) == 'z' && "expected a -> z, TEST CASE 2 ");
+    assert(shiftCharacter('z', 1) == 'a' &&  "expected z -> a, TEST CASE 3");
+    assert(shiftCharacter('z', -1) == 'y' && "expected z -> b, TEST CASE 4");
+    assert(shiftCharacter('a', 25) == 'z' && "expected a -> z, TEST CASE 5");
     
-    printf("shiftLetterTest - Passed\n");
+    printf("shiftCharacterTest - Passed\n");
 }

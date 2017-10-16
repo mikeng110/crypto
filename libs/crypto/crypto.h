@@ -14,7 +14,7 @@
 char *  encrypt(char * text, int key);
 char *  decrypt(char * text, int key);
 int     mod(int a, int b);
-void    setAlphabetCase(char letter, char *first_letter, char *last_letter);
-char    shiftLetter(char letter, int offset);
+void    setAlphabetCase(char ch, char *first_ch, char *last_ch);
+char    shiftCharacter(char ch, int offset);
 
 #endif
