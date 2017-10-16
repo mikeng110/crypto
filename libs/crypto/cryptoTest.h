@@ -7,10 +7,10 @@
 
 #include "crypto.h"
 
-void encryptTest();
-void decryptTest();
-int modTest();
-void setAlphabetCaseTest();
-void shiftLetterTest();
+void    encryptTest();
+void    decryptTest();
+int     modTest();
+void    setAlphabetCaseTest();
+void    shiftLetterTest();
 
 #endif

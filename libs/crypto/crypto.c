@@ -30,12 +30,14 @@ void setAlphabetCase(char letter, char *first_letter, char *last_letter)
             *first_letter = FIRST_LETTER_UPPER;
             *last_letter = LAST_LETTER_UPPER;
         }
+        
         else
         {
             *first_letter = FIRST_LETTER_LOWER;
             *last_letter = LAST_LETTER_LOWER;
         }
     }
+
     else
     {
         *first_letter = '\0';

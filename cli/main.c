@@ -5,7 +5,6 @@
 
 int main() 
 {
-
     char * text = "Apples90";
 
     if (RUN_UNIT_TESTS)
