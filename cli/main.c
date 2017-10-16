@@ -1,8 +1,8 @@
-#include <stdio.h>
 #include "crypto/crypto.h"
 #include "crypto/cryptoTest.h"
 
 #define RUN_UNIT_TESTS 1
+
 int main() 
 {
 
