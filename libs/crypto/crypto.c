@@ -60,16 +60,16 @@ int mod(int a, int b)
 char shiftCharacter(char ch, int offset)
 {
     char first_ch, last_ch;
-    int dist_a_to_ch, dist_total, ch_pos;
+    int dist_ch, dist_total, ch_pos;
 
-    if (isdigit(ch))    return ch; 
+    if (isdigit(ch))        return ch; 
     if (offset == 0)        return ch;
 
     setAlphabetCase(ch, &first_ch, &last_ch);
    
-    dist_a_to_ch = ch - first_ch;
+    dist_ch = ch - first_ch;
     dist_total = last_ch - first_ch;
-    ch_pos = mod(dist_a_to_ch + offset, dist_total+1);
+    ch_pos = mod(dist_ch + offset, dist_total+1);
 
     return  first_ch + ch_pos;
 }
