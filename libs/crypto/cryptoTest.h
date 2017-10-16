@@ -13,5 +13,4 @@ int modTest();
 void setAlphabetCaseTest();
 void shiftLetterTest();
 
-
 #endif

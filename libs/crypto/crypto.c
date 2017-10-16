@@ -45,12 +45,13 @@ void setAlphabetCase(char letter, char *first_letter, char *last_letter)
 
 int mod(int a, int b)
 {
-    int result;
-    result = a % b;
+    int result = a % b;
+
     while (result < 0)
     {
         result += b;
     }
+
     return result;
 }
 
@@ -69,5 +70,4 @@ char shiftLetter(char letter, int offset)
     letter_pos = mod(dist + offset, dist_total+1);
 
     return  first_letter + letter_pos;
-
 }
